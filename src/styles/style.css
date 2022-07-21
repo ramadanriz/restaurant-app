@@ -1,0 +1,351 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+   
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* hero element */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  text-align: center;
+  background: url("/dist/images/hero-image-small.jpg") no-repeat;
+  background-position-x: center;
+  background-position-y: 50%;
+  background-size: cover;
+
+}
+
+.hero-inner {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.hero-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.hero-tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* app-bar */
+
+app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+   
+app-bar .app-bar-menu {
+  display: flex;
+  align-items: center;
+}
+   
+app-bar .app-bar-menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+   
+app-bar .app-bar-brand {
+  display: flex;
+  align-items: center;
+}
+   
+app-bar .app-bar-brand h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  user-select: none;
+  font-family: 'Satisfy', cursive;
+}
+   
+app-bar .app-bar-navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+   
+app-bar .app-bar-navigation.open {
+  left: 0;
+}
+   
+app-bar .app-bar-navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/* main element */
+
+main {
+  flex: 1;
+}
+  
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+  
+.content .content-heading {
+  margin: 32px;
+  font-size: 1.5rem;
+}
+
+/* restaurants container element */
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+  padding: 32px;
+}
+
+/* restaurants item element */
+   
+.restaurants-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+  
+.restaurants-item-header {
+  position: relative;
+}
+  
+.restaurants-item .restaurants-item-header .restaurants-item-header-poster {
+  width: 100%;
+  height: 200px;
+}
+  
+.restaurants-item .restaurants-item-header .restaurants-item-header-rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+  
+.restaurants-item .restaurants-item-header .restaurants-item-header-rating .restaurants-item-header-rating-score {
+  margin-left: 10px;
+}
+  
+.restaurants-item .restaurants-item-content {
+  padding: 16px;
+}
+
+.restaurants-item .restaurants-item-content h3 {
+  font-size: 1.3rem;
+}
+
+.restaurants-item .restaurants-item-content h4 {
+  margin-bottom: 15px;
+  font-weight: 200;
+}
+  
+.restaurants-item .restaurants-item-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+}
+
+.restaurants-item .restaurants-item-content .cta {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  background: #212529;
+  padding: 0 44px;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 10px;
+  transition: .5s;
+}
+  
+.restaurants-item .restaurants-item-content .cta:hover{
+  background-color: #495057;
+}
+
+/* restaurant container element */
+  
+.restaurant {
+  margin: 0 auto;
+  padding: 32px;
+  width: 100%;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+/* restaurant item elemet */
+
+.restaurant .restaurant-poster {
+  width: 100%;
+  max-width: 400px;
+}
+  
+.restaurant .restaurant-info h4 {
+  margin-top: 10px;
+}
+
+.restaurant .restaurant-overview h2,
+.restaurant-overview .menus .foods h2,
+.restaurant-overview .menus .drinks h2{
+  margin-bottom: 10px;
+}
+
+.restaurant .restaurant-overview .restaurant-menus .restaurant-foods{
+margin-right: 20px;
+}
+
+.restaurant .restaurant-overview .restaurant-menus .restaurant-foods ul li,
+.restaurant .restaurant-overview .restaurant-menus .restaurant-drinks ul li{
+list-style: none;
+background: #212529;
+margin: 0 10px 10px 0;
+line-height: 30px;
+text-align: center;
+padding: 0 10px;
+color: white;
+border-radius: 0 5px 5px 10px;
+}
+
+.restaurant .restaurant-overview .restaurant-menus .restaurant-foods .restaurant-food-list,
+.restaurant .restaurant-overview .restaurant-menus .restaurant-drinks .restaurant-drink-list{
+display: flex;
+flex-wrap: wrap;
+}
+
+/* customer review element */
+
+.customer-reviews-container{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+}
+
+.customer-reviews-container .customer-reviews{
+width: 100%;
+box-shadow: 3px 3px 5px 2px rgba(0,0,0,.1);
+background: white;
+padding: 20px;
+margin: 12px;
+}
+
+.customer-reviews-container .customer-reviews .name-date{
+display: flex;
+flex-direction: column;
+margin-bottom: 20px;
+}
+
+.customer-reviews-container .customer-reviews .name-date strong{
+color: #3d3d3d;
+font-size: 1.1rem;
+letter-spacing: .5px;
+}
+
+.customer-reviews-container .customer-reviews .name-date span{
+color: #979797;
+font-size: .8rem;
+}
+
+.customer-reviews-container .customer-reviews .customer-review p{
+font-size: .9rem;
+color: #4b4b4b;
+}
+
+/* footer-bar element */
+  
+footer-bar {
+  padding: 16px;
+}
+  
+footer-bar p {
+  text-align: center;
+  color: #aaaaaa;
+}
+  
+footer-bar p a {
+  color: #db0000;
+  text-decoration: none;
+}
+
+footer-bar .footer-product{
+  font-family: 'Satisfy', cursive;
+}
+
+/* favourite button element */
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* skip to content element */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 999999999999999999999999999999;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
